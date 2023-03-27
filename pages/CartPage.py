@@ -1,6 +1,4 @@
-from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 
 from pages.AuthPage import AuthPage
 from pages.BasePage import BasePage
@@ -14,7 +12,6 @@ class CartPage(BasePage):
     PAYMENT_TYPE_CASH = (By.XPATH, "//*[contains(text(), 'Наличными при получении')]")
     AGREEMENT_CHECKBOX = (By.XPATH, "//*[@class='basket-submit__confirm']")
     BUTTON_SUBMIT_BUY = (By.XPATH, "//button[contains(@class, 'basket-submit__buy')]")
-
 
     def getTitle(self):
         return self.findElement(CartPage.PAGE_TITLE)

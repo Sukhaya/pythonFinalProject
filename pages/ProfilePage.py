@@ -7,7 +7,6 @@ class ProfilePage(BasePage):
     MENU_BUTTON = (By.XPATH, "//span[contains(text(), 'Каталог')]")
     MIXERS = (By.XPATH, "//*[contains(text(), 'Миксеры')]")
 
-
     def getTitle(self):
         return self.findElement(ProfilePage.PAGE_TITLE)
 

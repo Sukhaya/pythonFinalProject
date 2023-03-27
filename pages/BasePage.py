@@ -10,7 +10,6 @@ class BasePage:
         self.base_url = "https://shop.moulinex.ru/"
         self.driver.maximize_window()
 
-
     def findElement(self, locator, time=10):
         return WebDriverWait(self.driver, time).until(EC.element_to_be_clickable(locator),
                                                       message=f"Can't find element by locator {locator}")
@@ -21,7 +20,6 @@ class BasePage:
 
     def openUrl(self):
         return self.driver.get(self.base_url)
-
 
     def doScreenshot(self):
         now_date = datetime.datetime.utcnow().strftime("%d.%m.%Y - %H.%M.%S")
